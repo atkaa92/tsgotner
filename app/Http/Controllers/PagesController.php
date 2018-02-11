@@ -16,71 +16,67 @@ class PagesController extends Controller
         return view('home')->with($data);
     }
 
-    public function about()
+    public function royal()
     {
         $data = [
-            'currPage' => 'about'
+            'currPage' => 'royal'
         ];
-        return view('about')->with($data);
+        return view('royal')->with($data);
     }
 
-    public function rooms()
+    public function mirage()
     {
         $data = [
-            'currPage' => 'rooms'
+            'currPage' => 'mirage'
         ];
-        return view('rooms')->with($data);
+        return view('mirage')->with($data);
     }
 
-    public function room($id)
+    public function bigrussian()
     {
         $data = [
-            'currPage' => 'rooms'
+            'currPage' => 'bigrussian'
         ];
-        return view('room')->with($data);
+        return view('bigrussian')->with($data);
     }
 
-    public function gallery()
+    public function minirussian()
     {
         $data = [
-            'currPage' => 'gallery'
+            'currPage' => 'minirussian'
         ];
-        return view('gallery')->with($data);
+        return view('minirussian')->with($data);
     }
 
-    public function contacts()
+    public function eastern()
     {
         $data = [
-            'currPage' => 'contacts'
+            'currPage' => 'eastern'
         ];
-        return view('contacts')->with($data);
+        return view('eastern')->with($data);
     }
 
-    public function sentMail()
+    public function cottages()
     {
-        $this->validate(request(), [
-            'name' => 'required|max:199|min:1',
-            'email' => 'required|email|max:199',
-            'messsage' => 'required|min:3',
-            'subject' => 'required'
-        ]);
-        
-        $email = 'atkaa92@gmail.com';
-        $subject = request('subject');
-        $name = request('name');
-
-        $mail_data = [
-            'name' => request('name'),
-            'email' => request('email'),
-            'subject' => request('subject'),
-            'messsage' => request('messsage'),
+        $data = [
+            'currPage' => 'cottages'
         ];
+        return view('cottages')->with($data);
+    }
+    
+    public function cottage10()
+    {
+        $data = [
+            'currPage' => 'cottage10'
+        ];
+        return view('cottage10')->with($data);
+    }
 
-        $mail = Mail::send('mails.contacts', $mail_data, function($message) use ($email,$subject, $name){
-            $message->to($email)->subject($subject);
-            $message->from('tryl1tvin@gmail.com', $name);
-            $message->replyTo('tryl1tvin@gmail.com', $name);
-        });
-        return redirect()->back()->with('success', 'Спасибо за ваш вопрос. ');;
+    public function edem()
+    {
+        $data = [
+            'currPage' => 'edem'
+        ];
+        return view('edem')->with($data);
     }
 }

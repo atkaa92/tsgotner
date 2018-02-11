@@ -32,8 +32,8 @@ input[type=checkbox]{
 }
 
 .navbar-default {
-  background-color: #0b2e25;
-  border-color: #0b2e25;
+  background-color: rgb(18, 39, 59);
+  border-color: rgb(18, 39, 59);
 }
 .navbar-default .navbar-brand {
   color: #ecf0f1;
@@ -56,20 +56,20 @@ input[type=checkbox]{
 .navbar-default .navbar-nav > .active > a:hover,
 .navbar-default .navbar-nav > .active > a:focus {
   color: #0f6bba;
-  background-color: #255a4e;
+  background-color: #0f6bba;
 }
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
   color: #0f6bba;
-  background-color: #255a4e;
+  background-color: #0f6bba;
 }
 .navbar-default .navbar-toggle {
-  border-color: #255a4e;
+  border-color: #0f6bba;
 }
 .navbar-default .navbar-toggle:hover,
 .navbar-default .navbar-toggle:focus {
-  background-color: #255a4e;
+  background-color: #0f6bba;
 }
 .navbar-default .navbar-toggle .icon-bar {
   background-color: #ecf0f1;
@@ -87,16 +87,16 @@ input[type=checkbox]{
 
 /* Custom */
 .main-color-bg, .panel-primary .panel-heading{
-  background-color: #255a4e !important;
-  border-color: #255a4e !important;
+  background-color: rgba(28,41,69,0.8) !important;
+  border-color: rgba(28,41,69,0.8) !important;
   color:#ffffff !important;
 }
 .panel-primary{
-  border-color: #255a4e ;
+  border-color: #0f6bba ;
 }
 /* Header */
 #header{
-  background:#205347;
+  background:rgba(28, 41, 69, 0.9);
   color:#ffffff;
   padding-bottom: 10px;
   margin-bottom: 15px;
@@ -108,7 +108,7 @@ input[type=checkbox]{
 
 /* Breadcrumb */
 .breadcrumb{
-  background:#3c7660;
+  background:rgb(18, 39, 59);
   color:#cccccc;
 }
 
@@ -151,7 +151,7 @@ input[type=checkbox]{
 
 /* Footer */
 #footer{
-  background:#0b2e25;
+  background:rgb(18, 39, 59);
   color:#ffffff;
   text-align:center;
   padding:30px;
@@ -171,7 +171,7 @@ input[type=checkbox]{
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover,
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
     color: #0f6bba;
-    background-color: #255a4e;
+    background-color: #0f6bba;
   }
 }
 
@@ -207,7 +207,7 @@ input::-webkit-inner-spin-button {
   margin-left: -180px;
   width: 360px;
   background: rgba(202, 213, 235, 0.6);
-  box-shadow: 0 0 15px  #255a4e;
+  box-shadow: 0 0 15px  #0f6bba;
 }
 .body .yesOrNoContent .btn{
   background: none;
@@ -218,11 +218,11 @@ input::-webkit-inner-spin-button {
 .yesOrNoContent h3{
   font-size: 30px;
   margin-bottom: 35px;
-  color : #255a4e;
+  color : #0f6bba;
 }
 .body input, .body textarea, .body select{
   background: none;
-	border: 2px solid #255a4e;
+	border: 2px solid #0f6bba;
 }
 #preloader{
 	position: fixed;
@@ -235,7 +235,7 @@ input::-webkit-inner-spin-button {
 	overflow: visible;
 }
 .validErrorPop, .errorPop, .successPop{
-  color:#255a4e;
+  color:#0f6bba;
   z-index: 99999;
   position: fixed;
   top: 128px;
@@ -243,7 +243,7 @@ input::-webkit-inner-spin-button {
   text-align: center;
   padding: 15px;
   background: #f4f4f4;
-  box-shadow: 0 0 15px  #255a4e;
+  box-shadow: 0 0 15px  #0f6bba;
 }
 .validErrorPop, .errorPop {
   box-shadow: 0 0 15px  #AE4343;
@@ -255,14 +255,14 @@ input::-webkit-inner-spin-button {
   margin-top: 0;
 }
 .btn-default{
-  border: 1px solid #255a4e;
-  color: #255a4e;
+  border: 1px solid #0f6bba;
+  color: #0f6bba;
   font-weight: 700;
 }
 .btn-default:hover{
-  box-shadow: 0 0 2px 2px  #255a4e;
+  box-shadow: 0 0 2px 2px  #0f6bba;
   background: #fff;
-  color: #255a4e;
+  color: #0f6bba;
 }
 .btn-danger{
   background: #fff;

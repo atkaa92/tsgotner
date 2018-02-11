@@ -1,3 +1,3 @@
 <footer id="footer">
-    <p>Copyright Ibiza, &copy; {{ date("Y") }}</p>
+    <p>Copyright Tsghotner, &copy; {{ date("Y") }}</p>
 </footer>

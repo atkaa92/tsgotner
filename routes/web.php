@@ -23,17 +23,19 @@ Route::group(
     ],
     function()
     {
-        Route::get('/', 'PagesController@home');
-        Route::get('/about', 'PagesController@about');
-        Route::get('/rooms', 'PagesController@rooms');
-        Route::get('/room/{id}', 'PagesController@room');
-        Route::get('/gallery', 'PagesController@gallery');
-        Route::get('/contacts', 'PagesController@contacts');
+
     }
 );
 
-Route::post('/sentMail', 'PagesController@sentMail');
-
+Route::get('/', 'PagesController@home');
+Route::get('/royal', 'PagesController@royal');
+Route::get('/mirage', 'PagesController@mirage');
+Route::get('/bigrussian', 'PagesController@bigrussian');
+Route::get('/minirussian', 'PagesController@minirussian');
+Route::get('/edem', 'PagesController@edem');
+Route::get('/eastern', 'PagesController@eastern');
+Route::get('/cottages', 'PagesController@home');
+Route::get('/cottage10', 'PagesController@cottage10');
 
 Auth::routes();
 

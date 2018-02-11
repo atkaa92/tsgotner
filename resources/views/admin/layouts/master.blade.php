@@ -6,13 +6,14 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Iiza | ADMIN</title>
-        {{--  <link rel="icon" href="{{ url('images/logo.png') }}" sizes="32x16">  --}}
+        <title>Tsghotner | ADMIN</title>
+        <link rel="icon" href="{{ url('img/logo.png') }}" sizes="32x16">
         <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ url('css/jquery-ui.min.css') }}" rel="stylesheet">
         <link href="{{ url('css/font-awesome.min.css') }}" rel="stylesheet">
         <link href="{{ url('css/style.css') }}" rel="stylesheet">
         <link href="{{ url('css/fancybox.css') }}" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
         <script src="{{ url('/js/jquery.min.js') }}"></script>
         <script src="{{ url('/js/fancybox.js') }}"></script>
         @stack('stylesheets')

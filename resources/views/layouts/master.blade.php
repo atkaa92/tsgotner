@@ -6,114 +6,69 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Ibiza - Hotel And Sauna</title>
-        <link rel="icon" href="/images/favicon.png" sizes="32x16">
-        <link href="{{ url('css/bootstrap.min.css') }}" rel="stylesheet">
-        <link href="{{ url('css/font-awesome.min.css') }}" rel="stylesheet">
-        <link href="{{ url('css/settings.css') }}" rel="stylesheet">
-        <link href="{{ url('css/extralayers.css') }}" rel="stylesheet">
-        <link href="{{ url('css/jquery-ui.min.css') }}" rel="stylesheet">
-        <link href="{{ url('css/lightGallery.css') }}" rel="stylesheet">
-        <link href="{{ url('css/animate.css') }}" rel="stylesheet">
+        <meta name="description" content="Ծղոտներ հյուրանոցային համալիրը հանգստյան կենտրոն է հենց Երևանի սրտում, որն իր մեջ ներառում է թուրքական, ռուսական, ֆիննական բաղնիքներ, ընդարձակ լողավազաններ, ջակուզիներ, բիլիարդի համար նախատեսված սրահներ և պարահրապարակներ, ինչպես նաև ընտիր ռեստորան և հարմարավետ շքեղ հարկաբաժիններ։">
+        <meta name="keywords" content="ծղոտներ, սաունա, tsghotner, tsxotner, cxotner,  sauna">
+        <meta name="author" content="Centon Solutions">
+        <meta name="robots" content="index, follow, archive"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+        <title>Ծղոտներ հյուրանոցային համալիր</title>
+        <link rel="icon" href="/img/logo.png" sizes="32x16">
+
+        <link href="{{ url('css/bannerscollection_zoominout.css') }}" rel="stylesheet">
         <link href="{{ url('css/styleUi.css') }}" rel="stylesheet">
-        <script src="{{ url('/js/jquery.min.js') }}"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-        <link href='http://fonts.googleapis.com/css?family=Raleway:400,600,700,300' rel='stylesheet' type='text/css'>
+        <link href="{{ url('css/reset.css') }}" rel="stylesheet">
+        <link href="{{ url('css/font-awesome.min.css') }}" rel="stylesheet">
+        <link href="{{ url('css/jquery-ui.css') }}" rel="stylesheet">
+        <link href="{{ url('css/bootstrap.css') }}" rel="stylesheet">
+        <link href="{{ url('css/bootstrap-clockpicker.css') }}" rel="stylesheet">
+        <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,700,800' rel='stylesheet' type='text/css'>
+
         @stack('stylesheets')
     </head>
     <body>
         @include('includes/header')
         @yield('container')
         @include('includes/footer')
-	    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAJLQSoWWlWiSvOfF68k2TRaSrbCVCqCb8"></script>
+        
+	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js" type="text/javascript"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+        <script src="{{ url('/js/jquery.ui.touch-punch.min.js') }}"></script>
+        <script src="{{ url('/js/bannerscollection_zoominout.js') }}"></script>
         <script src="{{ url('/js/jquery-ui.min.js') }}"></script>
-        <script src="{{ url('/js/jquery.themepunch.revolution.min.js') }}"></script>
-        <script src="{{ url('/js/jquery.themepunch.tools.min.js') }}"></script>
         <script src="{{ url('/js/bootstrap.min.js') }}"></script>
-        <script src="{{ url('/js/imagesloaded.pkgd.min.js') }}"></script>
-        <script src="{{ url('/js/lightGallery.min.js') }}"></script>
-        {{--  <script src="{{ url('/js/validator.min.js') }}"></script>  --}}
-        <script src="{{ url('/js/mainUi.js') }}"></script>
+        <script src="{{ url('/js/bootstrap-clockpicker.min.js') }}"></script>
+        <script src="{{ url('/js/script.js') }}"></script>
         <script>
-            jQuery(document).ready(function() {
-                $(".gallery").lightGallery({
-                    thumbnail:false
-                });
-                $(function() {
-                    $( ".js-datapiker" ).datepicker();
-                });
-                var head = $('.header').outerHeight();
-                var reserv = $('.section--reserv').outerHeight();
-                var wnd = $(window).height();
-                var sum = wnd - head - reserv;
-                $('.tp-banner').show().revolution({
-                    dottedOverlay:"none",
-                    delay:9000,
-                    startwidth:940,
-                    startheight:sum,
-                    hideThumbs:200,
-                    minHeight:300,
-                    thumbWidth:100,
-                    thumbHeight:50,
-                    thumbAmount:3,
-                    simplifyAll:"off",
-                    navigationType:"bullet",
-                    navigationArrows:"solo",
-                    navigationStyle:"round",
-                    touchenabled:"on",
-                    onHoverStop:"off",
-                    nextSlideOnWindowFocus:"off",
-                    keyboardNavigation:"on",
-                    navigationHAlign:"center",
-                    navigationVAlign:"bottom",
-                    navigationHOffset:0,
-                    navigationVOffset:20,
-                    soloArrowLeftHalign:"left",
-                    soloArrowLeftValign:"center",
-                    soloArrowLeftHOffset:20,
-                    soloArrowLeftVOffset:0,
-                    soloArrowRightHalign:"right",
-                    soloArrowRightValign:"center",
-                    soloArrowRightHOffset:20,
-                    soloArrowRightVOffset:0,
-                    shadow:0,
-                    fullWidth:"on",
-                    fullScreen:"off",
-                });
-                (function(){
-                    var options = {
-                        center: {
-                            lat: 40.1948175,
-                            lng: 44.5466866
-                        },
-                        zoom: 15,
-                        disableDefaultUi: false,
-                        scrollwheel: false,
-                        draggable: true,
-                        mapTypeId: google.maps.MapTypeId.ROUDMAP,
-                        zoomControlOptions: {
-                            position: google.maps.ControlPosition.LEFT_BOTTOM,
-                            style: google.maps.ZoomControlStyle.SMALL
-                        },
-                        panControlOptions: {
-                            position: google.maps.ControlPosition.LEFT_BOTTOM,
-                        }
-                    };
-                    var element = document.getElementById('map');
-                    var map = new google.maps.Map(element, options);
-                    var marker = new google.maps.Marker({
-                        position: {
-                            lat: 40.1948175,
-                            lng: 44.5466866
-                        },
-                        map: map,
-                        icon: '/images/map.png'
+            jQuery(function() {
+                    // preloader
+                    $(window).load(function() {
+                    $(".wrap").fadeOut();
+                    $(".expand").delay(1000).fadeOut("slow"); 
                     });
-                    var info = new google.maps.InfoWindow({
-                        content: "Ibiza"
-                    });
-                }());
-            });	
+                    jQuery('#bannerscollection_zoominout_generous').bannerscollection_zoominout({
+                        skin: 'generous',
+                        responsive:true,
+                        width: 1920,
+                        height: 1200,
+                        width100Proc:true,
+                        height100Proc:true,
+                        showNavArrows:true,
+                        showBottomNav:true,
+                        thumbsOnMarginTop:11,
+                        thumbsWrapperMarginTop: -110,
+                        autoHideBottomNav:false,
+                        pauseOnMouseOver:false
+                    });		
+                    
+                });	
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                
+                ga('create', 'UA-59510450-1', 'auto');
+                ga('send', 'pageview');
         </script>
         @stack('scripts')
     </body>
