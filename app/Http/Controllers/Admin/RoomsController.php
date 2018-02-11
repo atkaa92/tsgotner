@@ -19,7 +19,6 @@ class RoomsController extends Controller
 
     public function someRoom($id = null)
     {
-        $features = Feature::get();
         $some = $id ? Room::find($id) : false;
         return view('admin.new-room')->with(compact('features','some'));
     }
@@ -32,7 +31,6 @@ class RoomsController extends Controller
     public function addRoomFunc(Request $request,$id = false)
     {
         $data = $request->all();
-        $data['features'] = serialize($data['features']);
         $data['images'] = serialize($data['images']);
         if(Room::updateOrCreate(['id'=>$id],$data)){
             return redirect()->back()->with('success','Room Saved');

@@ -18,13 +18,9 @@ class CreateRoomsTable extends Migration
             $table->string('en_name');
             $table->string('ru_name');
             $table->string('hy_name');
-            $table->text('en_desc');
-            $table->text('ru_desc');
-            $table->text('hy_desc');
             $table->integer('price');
             $table->integer('duration');
             $table->text('images');
-            $table->text('features');
             $table->timestamps();
         });
     }

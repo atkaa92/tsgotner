@@ -41,21 +41,6 @@
                                             </div>
                                             <hr class="clearfix">
                                             <div style="overflow: hidden">
-                                                <div class="col-xs-4">
-                                                    <label>English name</label>
-                                                    <textarea name="en_desc" required placeholder="English description" class="form-control">{{ $some ? $some->en_desc : ''}}</textarea>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>Russian name</label>
-                                                    <textarea name="ru_desc" required placeholder="Russian description" class="form-control">{{ $some ? $some->ru_desc : ''}}</textarea>
-                                                </div>
-                                                <div class="col-xs-4">
-                                                    <label>Armenian name</label>
-                                                    <textarea name="hy_desc" required placeholder="Armenian description" class="form-control">{{ $some ? $some->hy_desc : ''}}</textarea>
-                                                </div>
-                                            </div>
-                                            <hr class="clearfix">
-                                            <div style="overflow: hidden">
                                                 <div class="col-xs-6">
                                                     <label>Duration</label>
                                                     <input value="{{ $some ? $some->duration : ''}}" type="number" required name="duration" placeholder="1 hour">
@@ -71,7 +56,7 @@
                                             <hr class="clearfix">
                                             <div class="room-albom">
                                                 <div class="one-img">
-                                                    <img src="/images/no-image.png" width="100%">
+                                                    <img src="/img/no-image.png" width="100%">
                                                     <input type="hidden" id="room_image">
                                                 </div>
                                                 @if($some)
@@ -89,16 +74,6 @@
                                         </div>
                                     </div>
                                     <hr>
-                                    <div class="col-xs-9">
-                                        @foreach($features as $feature)
-                                            <div class="col-xs-4">
-                                                <div class="form-group">
-                                                    <input type="checkbox" {{ ($some && in_array($feature->id, unserialize($some->features))) ? 'checked' : ''}} name="features[]" value="{{ $feature->id }}">
-                                                    <label>{{$feature->en_name}}</label>
-                                                </div>
-                                            </div>
-                                        @endforeach
-                                    </div>
                                     <div class="col-xs-offset-10 col-xs-2">
                                         <button class="btn btn-lg btn-success">Save Room</button>
                                     </div>
