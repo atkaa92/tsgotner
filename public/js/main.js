@@ -33,70 +33,8 @@ $(document).on('click', '.close_error', function(){
     $(this).parent().fadeOut('slow');
 });
 
-//                                    Feature functional
-// ========================================================================================================
-$(document).on('click', '.deleteFeature', function(event){
-    event.preventDefault();
-    id = $(this).data("id");
-    action = $(".yesOrNo form").attr('action');
-    $(".yesOrNo").show();
-    $(".yesOrNo form").attr('action', action +'/delete-feature/'+id );
-    $(".yesOrNo form").submit(function(e){e.preventDefault();});
-})
-
-$(document).on('click', '.answerYes', function(){
-    $(".yesOrNo form").unbind().submit();
-    $(".yesOrNo").hide();
-})
-
-$(document).on('click', '.answerNo', function(){
-    $(".yesOrNo").hide();
-})
-
-
+//                                File Manager
 //=======================================================================================
-$(document).on('click','.open-collapse',function(){
-    if(!$(this).hasClass('open')){
-        $(this).addClass('open')
-        var selector = $(this).attr('href');
-        $(selector).load(this_func_url+"/"+$(this).data('slug'))
-    }
-})
-$(document).on('click','.deleteBanner',function () {
-    var form = $(this).closest('form')
-    form.attr('action',"/admin/deleteBanner")
-    form.submit()
-})
-$(document).on('click','.addBanner',function () {
-    var form = $(this).closest('form')
-    form.attr('action',"/admin/addBanner/"+$(this).data('slug'))
-    form.submit()
-})
-$(document).on('click','.addBlack',function () {
-    var form = $(this).closest('form')
-    form.attr('action',"/admin/addBlack/"+$(this).data('slug'))
-    form.submit()
-})
-$(document).on('click','.addWhite',function () {
-    var form = $(this).closest('form')
-    form.attr('action',"/admin/addWhite/"+$(this).data('slug'))
-    form.submit()
-})
-
-//=======================================================================================
-
-$('.list-parent').click(function () {
-    $(this).next().slideToggle(400)
-    var tip  = $(this).find('.pull-right')
-    if (tip.hasClass('fa-angle-double-right')) {
-        tip.removeClass('fa-angle-double-right');
-        tip.addClass('fa-angle-double-down')
-    }else{
-        tip.removeClass('fa-angle-double-down');
-        tip.addClass('fa-angle-double-right')
-    }
-})
-
 
 $('.open-filemanager').fancybox({
     'width'		: 900,

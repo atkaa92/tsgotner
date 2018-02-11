@@ -23,11 +23,6 @@ class RoomsController extends Controller
         return view('admin.new-room')->with(compact('features','some'));
     }
 
-    public function currentRoom($id)
-    {
-
-    }
-
     public function addRoomFunc(Request $request,$id = false)
     {
         $data = $request->all();
