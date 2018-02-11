@@ -9,68 +9,33 @@
 		<a href="/"><img src="/img/logo.png" alt="logo"></a>
 	</div>
 	<ul class="menuList" id="demos">
-		<li><a class="{{ $currPage == 'royal' ? 'active' : '' }}" href="/royal">Royal</a></li>
-		<li><a class="{{ $currPage == 'mirage' ? 'active' : '' }}" href="/mirage">Mirage</a></li>
-		<li><a class="{{ $currPage == 'bigrussian' ? 'active' : '' }}" href="/bigrussian">Big Russian</a></li>
-		<li><a class="{{ $currPage == 'minirussian' ? 'active' : '' }}" href="/minirussian" data-name="laguna">Mini Russian</a></li>
-		<li><a class="{{ $currPage == 'edem' ? 'active' : '' }}" href="/edem">Edem</a></li>  
-		<li><a class="{{ $currPage == 'eastern' ? 'active' : '' }}" href="/eastern">Eastern</a></li>
-		<li><a class="{{ $currPage == 'cottages' ? 'active' : '' }}" href="/cottages">Cottages</a></li>
-		<li><a class="{{ $currPage == 'cottage10' ? 'active' : '' }}" href="/cottage10">Cottage #10</a></li>
-		<li><a href="#" data-name="about">About Us</a></li>
+		<li><a class="{{ $currPage == 'royal' ? 'active' : '' }}" href="/royal">{{ trans('data.menu-royal') }}</a></li>
+		<li><a class="{{ $currPage == 'mirage' ? 'active' : '' }}" href="/mirage">{{ trans('data.menu-mirage') }}</a></li>
+		<li><a class="{{ $currPage == 'bigrussian' ? 'active' : '' }}" href="/bigrussian">{{ trans('data.menu-bigrussian') }}</a></li>
+		<li><a class="{{ $currPage == 'minirussian' ? 'active' : '' }}" href="/minirussian" data-name="laguna">{{ trans('data.menu-minirussian') }}</a></li>
+		<li><a class="{{ $currPage == 'edem' ? 'active' : '' }}" href="/edem">{{ trans('data.menu-edem') }}</a></li>  
+		<li><a class="{{ $currPage == 'eastern' ? 'active' : '' }}" href="/eastern">{{ trans('data.menu-eastern') }}</a></li>
+		<li><a class="{{ $currPage == 'cottages' ? 'active' : '' }}" href="/cottages">{{ trans('data.menu-cottages') }}</a></li>
+		<li><a class="{{ $currPage == 'cottage10' ? 'active' : '' }}" href="/cottage10">{{ trans('data.menu-cottage10') }}</a></li>
+		<li><a href="#" data-name="about">{{ trans('data.menu-about') }}</a></li>
 <!--			<li><a href="#" data-name="reserv">Reservation</a></li> -->
+	</ul>
+	<ul class="language" style="color:#fff">
+		@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+			<li >
+				<a  rel="alternate" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+					{{ $properties['native'] }}
+				</a>
+			</li>
+		@endforeach
 	</ul>
 </nav>
 <section class="content" id="about">
-	<ul class="language">
-		<li class="arm">Arm</li>
-		<li class="en">En</li>
-		<li class="ru">Ru</li>
-	</ul>
 	<div id="en" class="about_col">
-		<h1 class="title" >About Us</h1>
+		<h1 class="title" >{{ trans('data.menu-about') }}</h1>
 		<div class="text">
 			<p>
-				Unforgettable healthy recreation - “<strong>Tsghotner</strong>” sauna-hotel complex. “<strong>Tsghotner</strong>”
-				is a vast recreational complex, located in the heart of Yerevan and comprising
-				Eastern, Russian and Finnish baths, large pools, Jacuzzi, dance and billiard
-				halls as well as an exquisite restaurant and comfortable suites. The rooms of
-				our hotel will be a pleasant surprise even for the most demanding customers.
-				The interior design of the complex is special for its sense of taste and creativity.
-				At “<strong>Tsghotner</strong>” highly professional specialists will provide you with unique massage
-				and spa services. When we say “<strong>sauna</strong>” we often imagine a hot, stuffy room, where
-				you can hardly breathe and which you are eager to escape as quickly as possible.
-				In our complex it is also hard to breathe but because of our breathtaking quality and choice.
-			</p>
-		</div>
-	</div>
-	<div id="ru" class="about_col ">
-		<h1 class="title" >О нас</h1>
-		<div class="text">
-			<p>
-				Незабываемый отдых с пользой для здоровья - сауна-отель комплекс “<strong>Цхотнер</strong>”. “<strong>Цхотнер</strong>” это центр
-				отдыха в самом сердце Еревана, включающий в себя восточную, русскую, финскую бани, просторные
-				бассейны, джакузи, танцевальный и биллиардный залы, а также изысканный ресторан и комфортабельные
-				апартаменты. Номера нашей гостиницы приятно удивят даже самых требовательных клиентов. Дизайн
-				интерьера комплекса отличается особым вкусом и креативностью.  В “<strong>Цхотнер</strong>” к вашим услугам
-				профессиональные специалисты в области массажа и спа-услуг.  Часто, под словом <strong>сауна</strong> мы представляем 
-				аркую, душную комнату, где трудно дышать и откуда хочется поскорее выбраться. В “<strong>Цхотнер</strong>” у Вас
-				также захватит дыхание, но уже от обилия и качества наших услуг.
-			</p>
-		</div>
-	</div>
-	<div id="arm" class="about_col">
-	<h1 class="title" >Մեր մասին</h1>
-		<div class="text">
-			<p>
-				«<strong>Ծղոտներ</strong>» սաունա-հյուրանոցային համալիր- անմոռանալի հանգիստ՝ օգտակար առողջության համար «<strong>Ծղոտներ</strong>»-ը հանգստյան
-				կենտրոն է հենց Երևանի սրտում, որն իր մեջ ներառում է արևելյան, ռուսական, ֆիննական բաղնիքներ, ընդարձակ լողավազաններ,
-				ջակուզիներ, բիլիարդի համար նախատեսված սրահներ և պարահրապարակներ, ինչպես նաև ընտիր ռեստորան և հարմարավետ շքեղ
-				հարկաբաժիններ։ Մեր հյուրանոցի համարները հաճելիորեն կզարմացնեն նույնիսկ ամենապահանջկոտ հաճախորդներին։  Համալիրի ներքին
-				ձևավորումը աչքի է ընկնում յուրահատուկ ճաշակով և ինքնատիպությամբ «<strong>Ծղոտներ</strong>»-ում Ձեր տրամադրության տակ են մերսման և
-				SPA-ծառայությունների արհեստավարժ մասնագետներ։ Հաճախ «<strong>սաունա</strong>» ասելով պատկերացնում ենք շոգ, հեղձուցիչ սենյակ, որտեղ
-				դժվար է շնչել և որտեղից ուզում ես ժամ առաջ դուրս պրծնել…«<strong>Ծղոտներ</strong>»-ում նույնպես Ձեր շունչը կկտրվի, բայց այս անգամ արդեն
-				մեր ծառայությունների բարձր որակից և առատությունից։
+				{!! trans('data.about') !!}
 			</p>
 		</div>
 	</div>

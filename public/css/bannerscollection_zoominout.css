@@ -77,7 +77,7 @@
 	z-index:10;
 }
 .myloader {
-	background:url(/skins/loader.gif);
+	background:url(/css/skins/loader.gif);
 	width:37px;
 	height:37px;
 	position:absolute;

@@ -1,41 +1,31 @@
 <?php
 
 return [
-    'menu-home' => 'Главный',
+    //pages
+    'menu-royal' => 'royal',
+    'menu-mirage' => 'mirage',
+    'menu-bigrussian' => 'bigrussian',
+    'menu-minirussian' => 'mini russian',
+    'menu-edem' => 'edem',
+    'menu-eastern' => 'eastern',
+    'menu-cottages' => 'cottages',
+    'menu-cottage10' => 'cottage #10',
     'menu-about' => 'О нас',
-    'menu-rooms' => 'Комнаты',
-    'menu-gallery' => 'Галерея',
-    'menu-contacts' => 'Контакты',
-
-    //footer
-    'phone' => 'Phone',
-    'email' => 'E-mail',
-    'address' => 'Address',
-    'address-text' => 'Myasnikyan ave. 18 / 5',
-    'we-accept' => 'We accept',
-    //home
-    'more' => 'more',
-    'welcome' => 'Welcome to ',
-    'welcome-text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos- trud',
-    'saunas' => 'Saunas',
-    'saunas-text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos- trud',
-
-    //about
-    'about-text' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nos-trud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste',
 
     //rooms
     'dram' => 'AMD',
     'hour' => 'per hour',
 
-    //contacts
-    'sent-email' => 'Send a message',
-    'name' => 'Your Name',
-    'subject' => 'Subject',
-    'messsage' => 'Message',
-    'send' => 'Send',
+    //footer
+    'address' => 'Зарян 97',
 
-     //room
-     'desc' => 'Description',
-     'for-reserve' => 'Call for reservation'
+    //about
+    'about' => 'Незабываемый отдых с пользой для здоровья - сауна-отель комплекс “<strong>Цхотнер</strong>”. “<strong>Цхотнер</strong>” это центр
+    отдыха в самом сердце Еревана, включающий в себя восточную, русскую, финскую бани, просторные
+    бассейны, джакузи, танцевальный и биллиардный залы, а также изысканный ресторан и комфортабельные
+    апартаменты. Номера нашей гостиницы приятно удивят даже самых требовательных клиентов. Дизайн
+    интерьера комплекса отличается особым вкусом и креативностью.  В “<strong>Цхотнер</strong>” к вашим услугам
+    профессиональные специалисты в области массажа и спа-услуг.  Часто, под словом <strong>сауна</strong> мы представляем 
+    аркую, душную комнату, где трудно дышать и откуда хочется поскорее выбраться. В “<strong>Цхотнер</strong>” у Вас
+    также захватит дыхание, но уже от обилия и качества наших услуг.'
 ];
-

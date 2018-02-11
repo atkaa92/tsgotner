@@ -2,7 +2,7 @@
 
 @section('container')
 	<div class="price">
-        <span>&#36;</span> 20.000 AMD / hour
+        <span>&#36;</span> 20.000 {{ trans('data.dram') }} / {{ trans('data.hour') }}
     </div>
     <div id="bannerscollection_zoominout_generous">
     	<div class="myloader"></div>

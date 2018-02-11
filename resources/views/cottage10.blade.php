@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="price">
-        <span>&#36;</span>30.000 AMD/8 hour
+        <span>&#36;</span>30.000 {{ trans('data.dram') }} / 8  {{ trans('data.hour') }}
     </div>
     <div id="bannerscollection_zoominout_generous">
     	<div class="myloader"></div>
@@ -14,7 +14,7 @@
             <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText3" data-bottom-thumb="/img/Cottage10/thumb/Cottage10-3.jpg"><img src="/img/Cottage10/Cottage10-3.jpg" alt="ծղոտներ Քոթեջ 10" width="2500" height="1667" /></li>
             <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText3" data-bottom-thumb="/img/Cottage10/thumb/Cottage10-4.jpg"><img src="/img/Cottage10/Cottage10-4.jpg" alt="ծղոտներ Քոթեջ 10" width="2500" height="1667" /></li>
             <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText3" data-bottom-thumb="/img/Cottage10/thumb/Cottage10-5.jpg"><img src="/img/Cottage10/Cottage10-5.jpg" alt="ծղոտներ Քոթեջ 10" width="2500" height="1667" /></li>
-            <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText3" data-bottom-thumb="/img/Cottage10/thumb/Cottage10-6.jpg"><img src="img/Cottage10/Cottage10-6.jpg" alt="ծղոտներ Քոթեջ 10" width="2500" height="1667" /></li>
+            <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText3" data-bottom-thumb="/img/Cottage10/thumb/Cottage10-6.jpg"><img src="/img/Cottage10/Cottage10-6.jpg" alt="ծղոտներ Քոթեջ 10" width="2500" height="1667" /></li>
         </ul>
     </div>
 @endsection

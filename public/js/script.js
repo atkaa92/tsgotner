@@ -69,7 +69,7 @@ $(document).ready(function(){
 	var dollar = $('.price span');
 
 	dollar.click(function(){
-		$(this).parent().animate({'width': 187});
+		$(this).parent().animate({'width': 250});
 	});
 
 

@@ -10,7 +10,7 @@
 				<address class="address">
 					<i class="fa fa-phone"></i>
 					010 57 00 20, 010 57 00 21, 010 57 00 22
-					<span><i class="fa fa-map-marker"></i> Zavaryan 97</span>
+					<span><i class="fa fa-map-marker"></i> {{ trans('data.address') }}</span>
 				</address>
 			</div>
 		</div>

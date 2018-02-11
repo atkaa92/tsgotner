@@ -2,7 +2,7 @@
 
 @section('container')
     <div class="price">
-        <span>&#36;</span> 25.000 AMD / hour
+        <span>&#36;</span> 25.000 {{ trans('data.dram') }} / {{ trans('data.hour') }}
     </div>
     <div id="bannerscollection_zoominout_generous">
         <div class="myloader"></div>
@@ -20,7 +20,7 @@
             <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText1" data-bottom-thumb="/img/Royal/thumb/10.jpg" ><img src="/img/Royal/10.jpg" alt="ծղոտներ ռոյալ" width="2500" height="1667" /></li>
             <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText1" data-bottom-thumb="/img/Royal/thumb/11.jpg" ><img src="/img/Royal/11.jpg" alt="ծղոտներ ռոյալ" width="2500" height="1667" /></li>
             <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText1" data-bottom-thumb="/img/Royal/thumb/12.jpg" ><img src="/img/Royal/12.jpg" alt="ծղոտներ ռոյալ" width="2500" height="1667" /></li>
-            <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText1" data-bottom-thumb="/img/Royal/thumb/13.jpg" ><img src="img/Royal/13.jpg" alt="ծղոտներ ռոյալ" width="2500" height="1667" /></li>        
+            <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText1" data-bottom-thumb="/img/Royal/thumb/13.jpg" ><img src="/img/Royal/13.jpg" alt="ծղոտներ ռոյալ" width="2500" height="1667" /></li>        
         </ul>  
     </div>
 @endsection
