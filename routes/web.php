@@ -36,26 +36,19 @@ Route::group(
     }
 );
 
-Route::post('/sentMail', 'PagesController@sentMail');
-
 
 Auth::routes();
 
 Route::group(['prefix' => 'admin', 'middleware' => ['auth',]], function() {
     Route::get('/', 'HomeController@index')->name('home');
 
-    Route::get('/features', 'Admin\FeaturesController@features');
-    Route::get('/new-feature', 'Admin\FeaturesController@newFeature');
     Route::post('/add-feature', 'Admin\FeaturesController@addNewFeature');
     Route::post('/edit-feature/{id}', 'Admin\FeaturesController@editFeature');
     Route::post('/delete-feature/{id}', 'Admin\FeaturesController@deleteFeature');
 
-
-    Route::get('/rooms', 'HomeController@rooms');
-    Route::get('/new-room', 'HomeController@newRooms');
-
-
     Route::get('/rooms', 'Admin\RoomsController@rooms');
-    Route::get('/new-room', 'Admin\RoomsController@newRoom');
+    Route::get('/new-room', 'Admin\RoomsController@someRoom');
+    Route::get('/some-room/{id}', 'Admin\RoomsController@someRoom');
     Route::post('/add-room/{id?}', 'Admin\RoomsController@addRoomFunc');
+    Route::post('/remove-room/{id?}', 'Admin\RoomsController@removeRoomFunc');
 });

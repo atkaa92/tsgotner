@@ -13,13 +13,15 @@ class RoomsController extends Controller
 
     public function rooms()
     {
-
+        $rooms = Room::get();
+        return view('admin.rooms')->with(compact('rooms'));
     }
 
-    public function newRoom()
+    public function someRoom($id = null)
     {
         $features = Feature::get();
-        return view('admin.new-room')->with(compact('features'));
+        $some = $id ? Room::find($id) : false;
+        return view('admin.new-room')->with(compact('features','some'));
     }
 
     public function currentRoom($id)
@@ -37,4 +39,11 @@ class RoomsController extends Controller
         };
     }
 
+    public function removeRoomFunc($id)
+    {
+        if(Room::find($id)->delete()){
+            return redirect()->back()->with('success','Room deleted');
+        }
+        return redirect()->back()->with('error','Server Error');
+    }
 }
