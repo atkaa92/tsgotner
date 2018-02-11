@@ -7,6 +7,6 @@
         <span class="fa fa-cube" aria-hidden="true"></span> New Room </i>
     </a>
     <a href="{{ url('/admin/rooms') }}" class="list-group-item">
-        <span class="fa fa-cubes" aria-hidden="true"></span> Rooms </i>
+        <span class="fa fa-cubes" aria-hidden="true"></span> All Rooms </i>
     </a>
 </div>

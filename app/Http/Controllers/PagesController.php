@@ -4,10 +4,21 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Room;
 
 
 class PagesController extends Controller
 {
+    public function room()
+    {
+        $rooms = Room::all();
+        $data = [
+            'currPage' => 'home',
+            'rooms' => $rooms
+        ];
+        return view('room')->with($data);
+    }
+   
     public function home()
     {
         $data = [
