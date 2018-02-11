@@ -4,7 +4,7 @@ return [
     //pages
     'menu-royal' => 'royal',
     'menu-mirage' => 'mirage',
-    'menu-bigrussian' => 'bigrussian',
+    'menu-bigrussian' => 'big russian',
     'menu-minirussian' => 'mini russian',
     'menu-edem' => 'edem',
     'menu-eastern' => 'eastern',
