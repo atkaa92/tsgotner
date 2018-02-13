@@ -5,15 +5,16 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Models\Room;
-
+use DB;
 
 class PagesController extends Controller
 {
     public function rooms()
     {
         $rooms = Room::all();
+        $room = Room::orderBy(DB::raw('RAND()'))->take(1)->first();
         $data = [
-            'currPage' => 'home',
+            'room' => $room,
             'rooms' => $rooms
         ];
         return view('room')->with($data);
