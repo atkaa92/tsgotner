@@ -10,16 +10,8 @@
 	</div>
 	<ul class="menuList" id="demos">
 		@foreach($rooms as $r)
-			<li><a class="{{ $currPage == 'mirage' ? 'active' : '' }}" href="/room/{{$r->id}}">{{ getPropByLang($r,'name') }}</a></li>
+			<li><a class="{{ $r->slug == request()->segment(3) ? 'active' : '' }}" href="/room/{{$r->slug}}">{{ getPropByLang($r,'name') }}</a></li>
 		@endforeach
-		{{--  <li><a class="{{ $currPage == 'royal' ? 'active' : '' }}" href="/royal">{{ trans('data.menu-royal') }}</a></li>
-		<li><a class="{{ $currPage == 'mirage' ? 'active' : '' }}" href="/mirage">{{ trans('data.menu-mirage') }}</a></li>
-		<li><a class="{{ $currPage == 'bigrussian' ? 'active' : '' }}" href="/bigrussian">{{ trans('data.menu-bigrussian') }}</a></li>
-		<li><a class="{{ $currPage == 'minirussian' ? 'active' : '' }}" href="/minirussian" data-name="laguna">{{ trans('data.menu-minirussian') }}</a></li>
-		<li><a class="{{ $currPage == 'edem' ? 'active' : '' }}" href="/edem">{{ trans('data.menu-edem') }}</a></li>  
-		<li><a class="{{ $currPage == 'eastern' ? 'active' : '' }}" href="/eastern">{{ trans('data.menu-eastern') }}</a></li>
-		<li><a class="{{ $currPage == 'cottages' ? 'active' : '' }}" href="/cottages">{{ trans('data.menu-cottages') }}</a></li>
-		<li><a class="{{ $currPage == 'cottage10' ? 'active' : '' }}" href="/cottage10">{{ trans('data.menu-cottage10') }}</a></li>  --}}
 		<li><a href="#" data-name="about">{{ trans('data.menu-about') }}</a></li>
 <!--			<li><a href="#" data-name="reserv">Reservation</a></li> -->
 	</ul>

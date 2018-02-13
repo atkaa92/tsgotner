@@ -9,7 +9,7 @@ use App\Models\Room;
 
 class PagesController extends Controller
 {
-    public function room()
+    public function rooms()
     {
         $rooms = Room::all();
         $data = [
@@ -19,75 +19,18 @@ class PagesController extends Controller
         return view('room')->with($data);
     }
    
-    public function home()
+    public function room($slug)
     {
+        $room = Room::where('slug', $slug)->first();
+        $rooms = Room::all();
         $data = [
-            'currPage' => 'home'
+            'rooms' => $rooms,            
+            'room' => $room
         ];
-        return view('home')->with($data);
-    }
-
-    public function royal()
-    {
-        $data = [
-            'currPage' => 'royal'
-        ];
-        return view('royal')->with($data);
-    }
-
-    public function mirage()
-    {
-        $data = [
-            'currPage' => 'mirage'
-        ];
-        return view('mirage')->with($data);
-    }
-
-    public function bigrussian()
-    {
-        $data = [
-            'currPage' => 'bigrussian'
-        ];
-        return view('bigrussian')->with($data);
-    }
-
-    public function minirussian()
-    {
-        $data = [
-            'currPage' => 'minirussian'
-        ];
-        return view('minirussian')->with($data);
-    }
-
-    public function eastern()
-    {
-        $data = [
-            'currPage' => 'eastern'
-        ];
-        return view('eastern')->with($data);
-    }
-
-    public function cottages()
-    {
-        $data = [
-            'currPage' => 'cottages'
-        ];
-        return view('cottages')->with($data);
-    }
-    
-    public function cottage10()
-    {
-        $data = [
-            'currPage' => 'cottage10'
-        ];
-        return view('cottage10')->with($data);
-    }
-
-    public function edem()
-    {
-        $data = [
-            'currPage' => 'edem'
-        ];
-        return view('edem')->with($data);
+        // foreach (unserialize($room->images) as $image) {
+        //     $thumb = str_replace("source","thumbs",$image);
+        //     var_dump($thumb); var_dump($image);
+        // }exit;
+        return view('room')->with($data);
     }
 }

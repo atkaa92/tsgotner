@@ -15,6 +15,7 @@ return [
     //rooms
     'dram' => 'դրամ',
     'hour' => 'Ժամը',
+    'hours' => 'Ժամ',
 
     //footer
     'address' => 'Զարյան 97',

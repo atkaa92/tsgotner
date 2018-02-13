@@ -19,12 +19,12 @@
                         <div class="panel-heading main-color-bg">
                             <h3 class="panel-title">New Room</h3>
                         </div>
-                        <div class="panel-body">
+                        <div class="panel-body pl0">
                             <div>
                                 <form action="/admin/add-room{{ $some ? '/'.$some->id : '' }}" method="post">
                                     {{ csrf_field() }}
                                     <div style="overflow: hidden">
-                                        <div class="col-xs-10">
+                                        <div class="col-xs-10 pr0">
                                             <div style="overflow: hidden">
                                                 <div class="col-xs-4">
                                                     <label>English name</label>
@@ -41,13 +41,17 @@
                                             </div>
                                             <hr class="clearfix">
                                             <div style="overflow: hidden">
-                                                <div class="col-xs-6">
+                                                <div class="col-xs-4">
                                                     <label>Duration</label>
                                                     <input value="{{ $some ? $some->duration : ''}}" type="number" required name="duration" placeholder="1 hour">
                                                 </div>
-                                                <div class="col-xs-6">
-                                                    <input type="number" value="{{ $some ? $some->price : ''}}" name="price" placeholder="12.000 AMD">
+                                                <div class="col-xs-4">
                                                     <label>Price</label>
+                                                    <input type="number" value="{{ $some ? $some->price : ''}}" name="price" placeholder="12.000 AMD">
+                                                </div>
+                                                <div class="col-xs-4">
+                                                    <label>Slug</label>
+                                                    <input type="text" value="{{ $some ? $some->slug : ''}}" name="slug" placeholder="mitage">
                                                 </div>
                                             </div>
                                         </div>

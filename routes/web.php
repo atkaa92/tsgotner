@@ -23,19 +23,8 @@ Route::group(
     ],
     function()
     {
-        Route::get('/', 'PagesController@room');
-        // Route::get('/', 'PagesController@home');
-        Route::get('/royal', 'PagesController@royal');
-        Route::get('/mirage', 'PagesController@mirage');
-        Route::get('/bigrussian', 'PagesController@bigrussian');
-        Route::get('/minirussian', 'PagesController@minirussian');
-        Route::get('/edem', 'PagesController@edem');
-        Route::get('/eastern', 'PagesController@eastern');
-        Route::get('/cottages', 'PagesController@home');
-        Route::get('/cottage10', 'PagesController@cottage10');
-
-        
-
+        Route::get('/', 'PagesController@rooms');
+        Route::get('/room/{slug}', 'PagesController@room');
     }
 );
 

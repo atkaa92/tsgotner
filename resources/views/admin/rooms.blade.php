@@ -35,7 +35,7 @@
                                         <form action="{{ url('admin/remove-room/'.$room->id) }}" method="post" data-id="{{ $room->id }}" class="panel-footer" style="overflow: hidden">
                                             <a href='{{ url("admin/some-room/$room->id") }}' class="btn btn-success pull-left">Edit</a>
                                             {{csrf_field()}}
-                                            <button type="button" class="btn btn-danger pull-right deleteFeature delete-room">Remove</button>
+                                            <button type="button" class="btn btn-danger pull-right deleteRoom delete-room">Remove</button>
                                         </form>
                                     </div>
                                 </div>
@@ -52,6 +52,10 @@
         <div class="yesOrNo">
             <div class="yesOrNoContent">
                 <h3>Are you sure ???</h3>
+                <form  method="post">
+                    <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                    <input type="hidden" name="hiddenId">
+                </form>
                 <button class="btn btn-default answerYes" >Yes</button>
                 <button class="btn btn-danger answerNo">No</button>
             </div>
@@ -59,11 +63,4 @@
 
     </section>
 
-    <script>
-        var remove_id
-        $('.answerYes').click(function () {
-            console.log(remove_id)
-            $("form[data-id="+remove_id+"]").submit()
-        })
-    </script>
 @endsection

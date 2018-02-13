@@ -15,6 +15,7 @@ return [
     //rooms
     'dram' => 'AMD',
     'hour' => 'per hour',
+    'hours' => 'hour',
 
     //footer
     'address' => 'Зарян 97',

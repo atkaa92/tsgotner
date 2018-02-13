@@ -64,3 +64,22 @@ function responsive_filemanager_callback(field_id){
 $(document).on('click','.rm-image',function () {
     $(this).parent().remove()
 })
+
+//                                Room delete
+//=======================================================================================
+$(document).on('click', '.deleteRoom', function(event){
+    event.preventDefault();
+    action = $(this).closest("form").attr('action');
+    $(".yesOrNo").show();
+    $(".yesOrNo form").attr('action', action);
+    $(".yesOrNo form").submit(function(e){e.preventDefault();});
+})
+
+$(document).on('click', '.answerYes', function(){
+    $(".yesOrNo form").unbind().submit();
+    $(".yesOrNo").hide();
+})
+
+$(document).on('click', '.answerNo', function(){
+    $(".yesOrNo").hide();
+})

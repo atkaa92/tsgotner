@@ -391,3 +391,10 @@ input:checked + .slider:before {
 .menuList li a{
   text-transform: uppercase;
 }
+
+.pl0{
+  padding-left: 0 !important;
+}
+.pr0{
+  padding-right: 0 !important;
+}

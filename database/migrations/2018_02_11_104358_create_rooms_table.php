@@ -20,6 +20,7 @@ class CreateRoomsTable extends Migration
             $table->string('hy_name');
             $table->integer('price');
             $table->integer('duration');
+            $table->string('slug');
             $table->text('images');
             $table->timestamps();
         });
