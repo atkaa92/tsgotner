@@ -11,9 +11,7 @@
         @if(count($room))
             <ul class="bannerscollection_zoominout_list">
                 @foreach(unserialize($room->images) as $image)
-                    <div class="one-img">                      
-                        <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText1" data-bottom-thumb='{{ str_replace("source","thumbs",$image) }}' ><img src="{{ $image }}" alt="ծղոտներ ռուսական սաունա" width="2500" height="1667" /></li>
-                    </div>
+                    <li data-initialZoom="1" data-finalZoom="0.78" data-horizontalPosition="center" data-verticalPosition="bottom" data-text-id="#bannerscollection_zoominout_photoText1" data-bottom-thumb="{{ str_replace("source","thumbs",$image) }}" ><img src="{{ $image }}" alt="ծղոտներ ռուսական սաունա" width="2500" height="1667" /></li>
                 @endforeach
             </ul>  
         @endif

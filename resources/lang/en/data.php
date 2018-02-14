@@ -1,16 +1,6 @@
 <?php
 
 return [
-    //pages
-    'menu-royal' => 'royal',
-    'menu-mirage' => 'mirage',
-    'menu-bigrussian' => 'big russian',
-    'menu-minirussian' => 'mini russian',
-    'menu-edem' => 'edem',
-    'menu-eastern' => 'eastern',
-    'menu-cottages' => 'cottages',
-    'menu-cottage10' => 'cottage #10',
-    'menu-about' => 'About Us',
 
     //rooms
     'dram' => 'AMD',

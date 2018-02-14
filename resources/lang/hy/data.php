@@ -1,16 +1,6 @@
 <?php
 
 return [
-    //pages
-    'menu-royal' => 'Ռոյալ',
-    'menu-mirage' => 'Միրաժ',
-    'menu-bigrussian' => 'Ռուսական Մեծ',
-    'menu-minirussian' => 'Ռուսական Փոքր',
-    'menu-edem' => 'Եդեմ',
-    'menu-eastern' => 'Եստերն',
-    'menu-cottages' => 'Քոթեջներ',
-    'menu-cottage10' => 'Քոթեջ #10',
-    'menu-about' => 'Մեր մասին',
 
     //rooms
     'dram' => 'դրամ',
